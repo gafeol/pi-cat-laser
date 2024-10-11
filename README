@@ -1,0 +1,16 @@
+# Cat laser toy for Raspberry PI
+
+Random laser movement to keep cats entertained.
+
+## Testing
+
+Either run laser.py or run manual.py to manually control servos.
+
+
+## Running on Pi startup
+
+Run the python script on startup by setting it as a cron with `crontab -e`:
+
+```
+@reboot /usr/bin/python3 ~/pi-cat-laser/laser.py > ~/pi-cat-laser/out.log 2>&1
+```
